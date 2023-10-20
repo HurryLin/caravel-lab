@@ -37,7 +37,7 @@ cd $MF
 
 [ ! -d $LF ] && echo "$LF not exist, create it" && mkdir $LF
 [ -d $CLF ] && echo "$CLF exist, remove it" && rm -rf $CLF
-[ ! -d $CLF ] && echo "$CLF not exist, git clone it" && git clone -b 1003_merge_verify_rtl_hls05_repo https://github.com/HurryLin/caravel-lab
+[ ! -d $CLF ] && echo "$CLF not exist, git clone it" && git clone -b 1018_1_hdebug https://github.com/HurryLin/caravel-lab
 [ ! -d $CUPF ] && echo "$CUPF not exist, git clone it" && git clone -b mpw-8c-patch https://github.com/TonyHo722/caravel_user_project
 
 #cd $FFF
@@ -63,13 +63,13 @@ cp $CLF/custom_design/fsic/user_proj_example/user_project_wrapper.v $CUPF/verilo
 # merge fsic module files into user_proj_example.v
 cp $CLF/custom_design/fsic/user_proj_example/user_proj_example.v $CUPF/verilog/rtl/user_proj_example.v
 cp $CLF/custom_design/fsic/user_proj_example/fsic.vo $CUPF/verilog/rtl/fsic.vo
-#cp $CLF/custom_design/fsic/user_proj_example/axilite_master.sv $CUPF/verilog/rtl/axilite_master.sv
-#cp $CLF/custom_design/fsic/user_proj_example/axilite_slave.sv $CUPF/verilog/rtl/axilite_slave.sv
-#cp $CLF/custom_design/fsic/user_proj_example/axis_master.sv $CUPF/verilog/rtl/axis_master.sv
-#cp $CLF/custom_design/fsic/user_proj_example/axis_slave.sv $CUPF/verilog/rtl/axis_slave.sv
-#cp $CLF/custom_design/fsic/user_proj_example/axi_ctrl_logic.sv $CUPF/verilog/rtl/axi_ctrl_logic.sv
-#cp $CLF/custom_design/fsic/user_proj_example/axil_axis.sv $CUPF/verilog/rtl/axil_axis.sv
-cp $CLF/custom_design/fsic/user_proj_example/axil_axis.sv.patch $CUPF/verilog/rtl/axil_axis.sv
+cp $CLF/custom_design/fsic/user_proj_example/axilite_master.sv $CUPF/verilog/rtl/axilite_master.sv
+cp $CLF/custom_design/fsic/user_proj_example/axilite_slave.sv $CUPF/verilog/rtl/axilite_slave.sv
+cp $CLF/custom_design/fsic/user_proj_example/axis_master.sv $CUPF/verilog/rtl/axis_master.sv
+cp $CLF/custom_design/fsic/user_proj_example/axis_slave.sv $CUPF/verilog/rtl/axis_slave.sv
+cp $CLF/custom_design/fsic/user_proj_example/axi_ctrl_logic.sv $CUPF/verilog/rtl/axi_ctrl_logic.sv
+cp $CLF/custom_design/fsic/user_proj_example/axil_axis.sv $CUPF/verilog/rtl/axil_axis.sv
+#cp $CLF/custom_design/fsic/user_proj_example/axil_axis.sv.patch $CUPF/verilog/rtl/axil_axis.sv
 cp $CLF/custom_design/fsic/user_proj_example/sw_caravel.v $CUPF/verilog/rtl/sw_caravel.v
 cp $CLF/custom_design/fsic/user_proj_example/config_ctrl.v $CUPF/verilog/rtl/config_ctrl.v
 cp $CLF/custom_design/fsic/user_proj_example/fsic_clkrst.v $CUPF/verilog/rtl/fsic_clkrst.v
